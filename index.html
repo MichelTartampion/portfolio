@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Soudeur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+//
+//   ⬇️  MODIFIE UNIQUEMENT CE QUI SE TROUVE ENTRE LES BARRES  ⬇️
+//
+//   Règles importantes :
+//   • Garde les guillemets " " autour des textes
+//   • Mets une virgule , à la fin de chaque ligne
+//   • Pour une section que tu n'utilises pas : laisse le tableau vide []
+//   • Les photos : à côté de ce fichier OU dans un dossier nommé "images"
+//
+// ═══════════════════════════════════════════════════════════════════════════
+
+const PORTFOLIO = {
+
+  // ───── INFOS DE BASE ─────────────────────────────────────────────────────
+  prenom: "Michel",
+  nom: "Tartampion",
+  titre: "Soudeur-Chaudronnier Industriel",
+  ville: "Lyon, France",
+  email: "micheltartampion@email.com",
+  telephone: "+33 6 12 34 56 78",
+  disponibilite: "Disponible sous 1 mois", // ou "Immédiate", ou "" pour cacher
+
+  // ───── PHOTO DE PROFIL (optionnelle) ─────────────────────────────────────
+  // Mets ta photo à côté de ce fichier OU dans un dossier "images".
+  // Écris juste son nom ci-dessous — l'extension (.jpg/.png) est optionnelle.
+  // Exemple : photo: "ma-photo"   suffit.
+  // Laisse "" si tu ne veux pas de photo (recommandé si tu débutes).
+  photo: "micheltartampion",
+
+  // ───── À PROPOS (2-4 phrases) ────────────────────────────────────────────
+  bio: "Chaudronnier-soudeur qualifé, spécialisé en TIG et MIG/MAG. Je travaille l'acier, l'inox et l'aluminium en respectant les exigences de contrôle des secteurs aéronautique et ferroviaire. Rigueur sur la préparation, la traçabilité et la conformité des assemblages. Disponible pour un poste en région lyonnaise.",
+
+  annees_experience: 5,
+
+  // ───── PROCÉDÉS MAÎTRISÉS ────────────────────────────────────────────────
+  // niveau : "Notion" | "Pratique" | "Maîtrisé" | "Expert"
+  procedes: [
+    { nom: "MIG / MAG",          code: "135", niveau: "Maîtrisé" },
+    { nom: "TIG",                code: "141", niveau: "Maîtrisé" },
+    { nom: "Électrode enrobée",  code: "111", niveau: "Pratique" },
+    { nom: "Fil fourré",         code: "136", niveau: "Pratique" },
+  ],
+
+  // ───── MATÉRIAUX TRAVAILLÉS ──────────────────────────────────────────────
+  materiaux: [
+    "Acier au carbone",
+    "Acier inoxydable 304/316",
+    "Aluminium (séries 5000 / 6000)",
+    "Hardox500",
+  ],
+
+  // ───── POSITIONS DE SOUDAGE ──────────────────────────────────────────────
+  positions: ["PA", "PB", "PC", "PF", "PG"],
+
+  // ───── CERTIFICATIONS ────────────────────────────────────────────────────
+  certifications: [
+    {
+      nom: "Titre Professionnel Soudeur",
+      organisme: "Ministère du Travail",
+      annee: "2024",
+      details: "Obtenu avec mention"
+    },
+    {
+      nom: "Qualification ISO 9606-1",
+      organisme: "Bureau Veritas",
+      annee: "2024",
+      details: "TIG 141 — Acier inox épaisseur 3mm"
+    },
+  ],
+
+  // ───── RÉALISATIONS / PIÈCES (mets tes meilleures photos) ────────────────
+  // 3 à 6 pièces fonctionne mieux que 20 médiocres
+  // Photos à côté de ce fichier ou dans un dossier "images" — paysage 4:3 / 3:2
+  realisations: [
+    {
+      image: "Exemple1",                                        // ex: "piece-01"
+      titre: "Equipement aeronautique",
+      procede: "TIG 141",
+      materiau: "AlMg3 — ép. 6mm",
+      contexte: "Pièce réalisée pour Bombardier"
+    },
+    {
+      image: "Exemple2",
+      titre: "Assemblage tubulaire inox",
+      procede: "TIG 141",
+      materiau: "Inox 316L — ép. 3mm",
+      contexte: "Formation industrielle"
+    },
+    {
+      image: "Exemple3",
+      titre: "Structure mécano-soudée",
+      procede: "MIG 135",
+      materiau: "Acier S235 — ép. 8mm",
+      contexte: "Projet personnel"
+    },
+  ],
+
+  // ───── VIDÉOS YOUTUBE ────────────────────────────────────────────────────
+  // Colle l'URL YouTube complète (ou laisse [] si tu n'as pas de vidéo)
+  videos: [
+    // "https://www.youtube.com/watch?v=XXXXXXXXXXX",
+  ],
+
+  // ───── FORMATION ─────────────────────────────────────────────────────────
+  formation: [
+    {
+      diplome: "Titre Pro Soudeur",
+      etablissement: "Centre de formation AFPA",
+      annee: "2024",
+    },
+    {
+      diplome: "Formation Soudeur à Coup Sûr",
+      etablissement: "Maple Leaf Soudure",
+      annee: "2024",
+    },
+  ],
+
+  // ───── EXPÉRIENCE (optionnel — laisse [] si débutant) ────────────────────
+  experience: [
+     {
+       poste: "Soudeur",
+      entreprise: "La Société Géniale",
+       periode: "2021 - 2024",
+      description: "Soudage TIG et MIG/MAG sur ensembles chaudronnés en acier inoxydable 304L et 316L, épaisseurs 2 à 8 mm. Lecture de plans isométriques, préparation des chanfreins, soudage en positions multiples. Auto-contrôle visuel selon ISO 5817 niveau B avant passage au contrôle qualité."
+     },
+      {
+       poste: "Chaudronnier",
+      entreprise: "Nom de l'entreprise",
+       periode: "2024 - 2026",
+      description: "Traçage, débit, formage et roulage de tôles acier et inox. Assemblage et pointage avant soudage, contrôle des développés et des cotes. Fabrication de pièces unitaires et petites séries à partir de plans."
+     },
+  ],
+
+  // ───── LANGUES ───────────────────────────────────────────────────────────
+  langues: [
+    { langue: "Français", niveau: "Langue maternelle" },
+    { langue: "Anglais",  niveau: "B1 — Technique" },
+  ],
+
+  // ───── LIENS (laisse "" pour cacher un lien) ─────────────────────────────
+  linkedin: "",
+  youtube: "",
+  github: "",
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+//
+//   ⬆️  ARRÊTE DE MODIFIER ICI — TOUT LE RESTE EST LA MÉCANIQUE  ⬆️
+//
+// ═══════════════════════════════════════════════════════════════════════════
+</script>
+
+<style>
+:root {
+  --bg:        #f3eee4;
+  --bg-tint:   #ede6d6;
+  --paper:    #faf6ec;
+  --ink:       #14110d;
+  --ink-soft:  #5b5448;
+  --rule:      #c9bfa8;
+  --rule-soft: #ddd3bd;
+  --hot:       #c8421f;
+  --hot-deep:  #8a2a10;
+  --blue:      #1e3a5f;
+
+  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans:  "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono:  "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "ss02";
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(200,66,31,0.04) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(30,58,95,0.03) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* ─── Noise overlay ─────────────────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ─── Layout ──────────────────────────────────────────────────── */
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 40px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Top bar ─────────────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 18px;
+  margin-bottom: 80px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.topbar .doc-id { color: var(--ink); }
+.topbar .doc-id::before {
+  content: "■";
+  color: var(--hot);
+  margin-right: 8px;
+}
+
+/* ─── Hero ────────────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 60px;
+  margin-bottom: 100px;
+  align-items: end;
+  opacity: 0;
+  animation: rise 0.9s 0.1s forwards cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--hot);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+  max-width: 80px;
+}
+
+h1.name {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(56px, 9vw, 124px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin-bottom: 28px;
+  font-variation-settings: "SOFT" 30, "WONK" 1, "opsz" 144;
+}
+h1.name .firstname { display: block; font-style: italic; font-weight: 300; }
+h1.name .lastname  { display: block; font-weight: 600; }
+
+.role {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.location {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-meta {
+  border-left: 1px solid var(--rule);
+  padding-left: 32px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hero-meta .meta-row {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-meta .meta-row:last-child { border-bottom: 0; }
+.hero-meta .label { color: var(--ink-soft); font-size: 10px; }
+.hero-meta .value { color: var(--ink); font-size: 12px; font-weight: 500; }
+.hero-meta .value a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.hero-meta .value a:hover { border-color: var(--hot); }
+
+.avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  margin-bottom: 24px;
+  filter: grayscale(20%) contrast(1.05);
+}
+
+/* ─── Section headers ──────────────────────────────────────────── */
+section { margin-bottom: 96px; scroll-margin-top: 40px; }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  border-top: 1px solid var(--ink);
+  padding-top: 24px;
+  margin-bottom: 48px;
+}
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--hot);
+  letter-spacing: 0.1em;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 60;
+}
+.section-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+
+/* ─── About ───────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 80px;
+}
+.bio-text {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 30;
+  color: var(--ink);
+}
+.bio-text::first-letter {
+  font-size: 64px;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  margin: 6px 12px 0 0;
+  color: var(--hot);
+  font-style: italic;
+}
+.about-stats { display: flex; flex-direction: column; gap: 24px; }
+.stat-block {
+  border-left: 2px solid var(--hot);
+  padding-left: 16px;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variation-settings: "opsz" 144;
+}
+.stat-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+
+/* ─── Procedures grid ─────────────────────────────────────────── */
+.proc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.proc-card {
+  padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  background: var(--paper);
+  transition: background 0.3s;
+}
+.proc-card:hover { background: var(--bg-tint); }
+.proc-card .code {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.proc-card .code::before { content: "ISO 4063 · "; }
+.proc-card .name {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  font-variation-settings: "opsz" 60;
+}
+.proc-card .level-bar {
+  height: 2px;
+  background: var(--rule-soft);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.proc-card .level-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hot);
+  transform-origin: left;
+  transform: scaleX(var(--level, 0.5));
+  transition: transform 0.8s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.proc-card .level-text {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ─── Specs grid (materials + positions) ──────────────────────── */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 32px;
+}
+.specs-block h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  letter-spacing: 0.03em;
+}
+.tag.position {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  font-weight: 500;
+}
+
+/* ─── Certifications ─────────────────────────────────────────── */
+.cert-list { border-top: 1px solid var(--rule); }
+.cert-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.cert-year {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hot);
+  letter-spacing: 0.05em;
+}
+.cert-content .cert-name {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  font-variation-settings: "opsz" 60;
+}
+.cert-content .cert-details {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.cert-org {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+/* ─── Realisations grid ──────────────────────────────────────── */
+.real-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+.real-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+.real-img {
+  aspect-ratio: 4 / 3;
+  background: var(--bg-tint);
+  position: relative;
+  overflow: hidden;
+}
+.real-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.real-card:hover .real-img img { transform: scale(1.04); }
+.real-img.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 12px, rgba(0,0,0,0.04) 12px, rgba(0,0,0,0.04) 13px);
+}
+.real-meta {
+  padding: 20px 22px;
+}
+.real-meta .procede {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hot);
+  margin-bottom: 8px;
+}
+.real-meta .titre {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  font-variation-settings: "opsz" 60;
+  line-height: 1.2;
+}
+.real-meta .materiau {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.real-meta .contexte {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule-soft);
+}
+
+/* ─── Videos ─────────────────────────────────────────────────── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+}
+.video-frame {
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  border: 1px solid var(--rule);
+}
+.video-frame iframe {
+  width: 100%; height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ─── Two-column lists (formation, experience, langues) ───────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.dl-list { border-top: 1px solid var(--rule); }
+.dl-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.dl-year {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--hot);
+  letter-spacing: 0.05em;
+}
+.dl-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 30;
+}
+.dl-sub {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.dl-row p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ─── Contact / footer ───────────────────────────────────────── */
+.contact {
+  background: var(--ink);
+  color: var(--paper);
+  margin: 120px -40px -80px;
+  padding: 80px 40px;
+  position: relative;
+}
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact .eyebrow { color: var(--hot); }
+.contact .eyebrow::after { background: rgba(250,246,236,0.2); }
+.contact h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 48px;
+  font-variation-settings: "opsz" 144;
+}
+.contact h2 em { font-style: italic; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  border-top: 1px solid rgba(250,246,236,0.2);
+  padding-top: 32px;
+}
+.contact-block .label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(250,246,236,0.5);
+  margin-bottom: 8px;
+}
+.contact-block .value {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 60;
+}
+.contact-block .value a {
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(250,246,236,0.3);
+  transition: border-color 0.2s;
+}
+.contact-block .value a:hover { border-color: var(--hot); }
+
+.colophon {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(250,246,236,0.2);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250,246,236,0.5);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .wrap { padding: 24px 20px 60px; }
+  .hero { grid-template-columns: 1fr; gap: 32px; margin-bottom: 60px; }
+  .hero-meta { border-left: 0; border-top: 1px solid var(--rule); padding: 24px 0 0; }
+  .about-grid, .two-col { grid-template-columns: 1fr; gap: 40px; }
+  .specs-grid { grid-template-columns: 1fr; gap: 32px; }
+  .cert-row { grid-template-columns: 70px 1fr; gap: 16px; }
+  .cert-org { grid-column: 2; text-align: left; margin-top: 4px; }
+  .section-head { grid-template-columns: 40px 1fr; gap: 16px; }
+  .section-title { font-size: 26px; }
+  .bio-text { font-size: 18px; }
+  .contact { margin: 80px -20px -60px; padding: 60px 20px; }
+}
+
+@media print {
+  body::before { display: none; }
+  .contact { background: var(--bg); color: var(--ink); }
+  .contact .value a { color: var(--ink); }
+  section { page-break-inside: avoid; }
+}
+
+/* ─── Empty state for entirely empty sections ─────────────────── */
+.is-empty { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="doc-id" id="doc-id">PORTFOLIO / 001</div>
+    <div id="doc-date"></div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Dossier candidat — soudeur</div>
+      <h1 class="name">
+        <span class="firstname" id="h-firstname"></span>
+        <span class="lastname"  id="h-lastname"></span>
+      </h1>
+      <div class="role" id="h-role"></div>
+      <div class="location" id="h-location"></div>
+    </div>
+    <aside class="hero-meta" id="hero-meta"></aside>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-head">
+      <div class="section-num">01 / À propos</div>
+      <h2 class="section-title">Le <em>profil</em> en quelques mots</h2>
+    </div>
+    <div class="about-grid">
+      <p class="bio-text" id="bio"></p>
+      <div class="about-stats" id="stats"></div>
+    </div>
+  </section>
+
+  <!-- PROCÉDÉS -->
+  <section id="procedes">
+    <div class="section-head">
+      <div class="section-num">02 / Compétences</div>
+      <h2 class="section-title">Procédés <em>maîtrisés</em></h2>
+    </div>
+    <div class="proc-grid" id="proc-grid"></div>
+    <div class="specs-grid">
+      <div class="specs-block" id="specs-mat">
+        <h3>Matériaux travaillés</h3>
+        <div class="tag-list" id="materiaux-list"></div>
+      </div>
+      <div class="specs-block" id="specs-pos">
+        <h3>Positions de soudage</h3>
+        <div class="tag-list" id="positions-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-head">
+      <div class="section-num">03 / Qualifications</div>
+      <h2 class="section-title">Certifications <em>obtenues</em></h2>
+    </div>
+    <div class="cert-list" id="cert-list"></div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section id="realisations">
+    <div class="section-head">
+      <div class="section-num">04 / Portfolio</div>
+      <h2 class="section-title">Pièces <em>réalisées</em></h2>
+    </div>
+    <div class="real-grid" id="real-grid"></div>
+  </section>
+
+  <!-- VIDÉOS -->
+  <section id="videos">
+    <div class="section-head">
+      <div class="section-num">05 / Démonstrations</div>
+      <h2 class="section-title">Soudage <em>en vidéo</em></h2>
+    </div>
+    <div class="video-grid" id="video-grid"></div>
+  </section>
+
+  <!-- FORMATION + EXPÉRIENCE -->
+  <section id="parcours">
+    <div class="section-head">
+      <div class="section-num">06 / Parcours</div>
+      <h2 class="section-title">Formation <em>&amp;</em> expérience</h2>
+    </div>
+    <div class="two-col">
+      <div id="block-formation">
+        <h3 style="font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0;">Formation</h3>
+        <div class="dl-list" id="formation-list"></div>
+      </div>
+      <div id="block-experience">
+        <h3 style="font-family:var(--mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0;">Expérience</h3>
+        <div class="dl-list" id="experience-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUES -->
+  <section id="langues">
+    <div class="section-head">
+      <div class="section-num">07 / Langues</div>
+      <h2 class="section-title">Langues <em>parlées</em></h2>
+    </div>
+    <div class="dl-list" id="langues-list"></div>
+  </section>
+
+</div>
+
+<!-- CONTACT -->
+<footer class="contact">
+  <div class="contact-inner">
+    <div class="eyebrow">Prise de contact</div>
+    <h2>Disponible pour <em>échanger</em><br>sur vos projets.</h2>
+    <div class="contact-grid" id="contact-grid"></div>
+    <div class="colophon">
+      <div>© <span id="year"></span> · <span id="full-name"></span></div>
+      <div></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── Helpers ─────────────────────────────────────────────────────
+const $  = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const has = (v) => v !== undefined && v !== null && v !== "" && !(Array.isArray(v) && v.length === 0);
+
+const LEVELS = { "Notion": 0.25, "Pratique": 0.55, "Maîtrisé": 0.8, "Expert": 1.0 };
+
+// ─── Chargement intelligent des images ──────────────────────────
+// Retrouve la photo même si l'extension (.jpg/.png) ou le dossier
+// n'est pas indiqué exactement. L'apprenant écrit juste un nom.
+function buildCandidates(raw) {
+  const r = String(raw).trim().replace(/^\.?\//, "");
+  if (!r) return [];
+  const extMatch = r.match(/\.[a-z0-9]+$/i);
+  const exts = extMatch ? [extMatch[0]]
+                        : [".jpg", ".jpeg", ".png", ".webp", ".JPG", ".PNG"];
+  const base = extMatch ? r.slice(0, -extMatch[0].length) : r;
+  const folders = r.includes("/") ? [""] : ["", "images/"];
+  const out = [];
+  for (const f of folders)
+    for (const e of exts)
+      out.push(f + base + e);
+  return [...new Set(out)];
+}
+
+function loadSmartImage(el) {
+  const candidates = buildCandidates(el.getAttribute("data-img"));
+  if (!candidates.length) { el.dispatchEvent(new Event("imgmissing")); return; }
+  let i = 0;
+  el.addEventListener("error", () => {
+    if (++i < candidates.length) el.src = candidates[i];
+    else el.dispatchEvent(new Event("imgmissing"));
+  });
+  el.src = candidates[0];
+}
+
+function ytEmbed(url) {
+  const m = String(url).match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+  return m ? "https://www.youtube.com/embed/" + m[1] : null;
+}
+
+// ─── Render ──────────────────────────────────────────────────────
+function render(p) {
+  // Document meta
+  const initials = ((p.prenom||"").charAt(0) + (p.nom||"").charAt(0)).toUpperCase();
+  $("#doc-id").innerHTML = '<span style="color:var(--hot)">■</span> Portfolio · ' + esc(initials);
+  $("#doc-date").textContent = new Date().toLocaleDateString("fr-FR", { year: "numeric", month: "long" });
+  document.title = (p.prenom || "") + " " + (p.nom || "") + " — Portfolio Soudeur";
+
+  // Hero
+  $("#h-firstname").textContent = p.prenom || "";
+  $("#h-lastname").textContent  = p.nom || "";
+  $("#h-role").textContent      = p.titre || "";
+  $("#h-location").textContent  = p.ville || "";
+
+  // Hero meta
+  const meta = $("#hero-meta");
+  const metaRows = [];
+  if (has(p.photo)) {
+    meta.insertAdjacentHTML("afterbegin",
+      `<img alt="" class="avatar" data-img="${esc(p.photo)}">`);
+    const av = meta.querySelector(".avatar");
+    av.addEventListener("imgmissing", () => av.remove());
+    loadSmartImage(av);
+  }
+  if (has(p.email))         metaRows.push({ l: "Email",     v: `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` });
+  if (has(p.telephone))     metaRows.push({ l: "Téléphone", v: `<a href="tel:${esc(p.telephone.replace(/\s/g,''))}">${esc(p.telephone)}</a>` });
+  if (has(p.disponibilite)) metaRows.push({ l: "Disponibilité", v: esc(p.disponibilite) });
+  if (has(p.linkedin))      metaRows.push({ l: "LinkedIn",  v: `<a href="${esc(p.linkedin)}" target="_blank" rel="noopener">Voir le profil</a>` });
+  if (has(p.youtube))       metaRows.push({ l: "YouTube",   v: `<a href="${esc(p.youtube)}" target="_blank" rel="noopener">Chaîne</a>` });
+  if (has(p.github))        metaRows.push({ l: "GitHub",    v: `<a href="${esc(p.github)}" target="_blank" rel="noopener">Profil</a>` });
+  meta.insertAdjacentHTML("beforeend", metaRows.map(r =>
+    `<div class="meta-row"><span class="label">${r.l}</span><span class="value">${r.v}</span></div>`).join(""));
+
+  // About
+  $("#bio").textContent = p.bio || "";
+  const stats = [];
+  if (has(p.annees_experience)) stats.push({ n: p.annees_experience + (p.annees_experience >= 2 ? " ans" : " an"), l: "Expérience cumulée" });
+  if (has(p.procedes))          stats.push({ n: p.procedes.length, l: "Procédés pratiqués" });
+  if (has(p.certifications))    stats.push({ n: p.certifications.length, l: "Certifications" });
+  $("#stats").innerHTML = stats.map(s =>
+    `<div class="stat-block"><div class="stat-num">${esc(s.n)}</div><div class="stat-label">${esc(s.l)}</div></div>`).join("");
+
+  // Procédés
+  if (has(p.procedes)) {
+    $("#proc-grid").innerHTML = p.procedes.map(pr => `
+      <div class="proc-card">
+        <div class="code">${esc(pr.code || "—")}</div>
+        <div class="name">${esc(pr.nom || "")}</div>
+        <div class="level-bar" style="--level: ${LEVELS[pr.niveau] || 0.5}"></div>
+        <div class="level-text">${esc(pr.niveau || "")}</div>
+      </div>`).join("");
+  } else {
+    $("#procedes").classList.add("is-empty");
+  }
+
+  // Materiaux / positions
+  if (has(p.materiaux)) {
+    $("#materiaux-list").innerHTML = p.materiaux.map(m => `<span class="tag">${esc(m)}</span>`).join("");
+  } else { $("#specs-mat").classList.add("is-empty"); }
+
+  if (has(p.positions)) {
+    $("#positions-list").innerHTML = p.positions.map(pos => `<span class="tag position">${esc(pos)}</span>`).join("");
+  } else { $("#specs-pos").classList.add("is-empty"); }
+
+  // Certifications
+  if (has(p.certifications)) {
+    $("#cert-list").innerHTML = p.certifications.map(c => `
+      <div class="cert-row">
+        <div class="cert-year">${esc(c.annee || "")}</div>
+        <div class="cert-content">
+          <div class="cert-name">${esc(c.nom || "")}</div>
+          ${has(c.details) ? `<div class="cert-details">${esc(c.details)}</div>` : ""}
+        </div>
+        <div class="cert-org">${esc(c.organisme || "")}</div>
+      </div>`).join("");
+  } else {
+    $("#certifications").classList.add("is-empty");
+  }
+
+  // Réalisations
+  if (has(p.realisations)) {
+    $("#real-grid").innerHTML = p.realisations.map(r => {
+      const imgBlock = has(r.image)
+        ? `<div class="real-img"><img alt="${esc(r.titre||'')}" loading="lazy" data-img="${esc(r.image)}"></div>`
+        : `<div class="real-img placeholder">Photo à ajouter</div>`;
+      return `
+        <article class="real-card">
+          ${imgBlock}
+          <div class="real-meta">
+            ${has(r.procede)  ? `<div class="procede">${esc(r.procede)}</div>` : ""}
+            <div class="titre">${esc(r.titre || "")}</div>
+            ${has(r.materiau) ? `<div class="materiau">${esc(r.materiau)}</div>` : ""}
+            ${has(r.contexte) ? `<div class="contexte">${esc(r.contexte)}</div>` : ""}
+          </div>
+        </article>`;
+    }).join("");
+    $$("#real-grid img[data-img]").forEach(im => {
+      im.addEventListener("imgmissing", () => {
+        const box = im.parentElement;
+        box.classList.add("placeholder");
+        box.textContent = "Photo à ajouter";
+      });
+      loadSmartImage(im);
+    });
+  } else {
+    $("#realisations").classList.add("is-empty");
+  }
+
+  // Vidéos
+  if (has(p.videos)) {
+    const valid = p.videos.map(ytEmbed).filter(Boolean);
+    if (valid.length) {
+      $("#video-grid").innerHTML = valid.map(v =>
+        `<div class="video-frame"><iframe src="${esc(v)}" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`).join("");
+    } else {
+      $("#videos").classList.add("is-empty");
+    }
+  } else {
+    $("#videos").classList.add("is-empty");
+  }
+
+  // Formation
+  if (has(p.formation)) {
+    $("#formation-list").innerHTML = p.formation.map(f => `
+      <div class="dl-row">
+        <div class="dl-year">${esc(f.annee || "")}</div>
+        <div>
+          <div class="dl-title">${esc(f.diplome || "")}</div>
+          <div class="dl-sub">${esc(f.etablissement || "")}</div>
+        </div>
+      </div>`).join("");
+  } else { $("#block-formation").classList.add("is-empty"); }
+
+  // Expérience
+  if (has(p.experience)) {
+    $("#experience-list").innerHTML = p.experience.map(e => `
+      <div class="dl-row">
+        <div class="dl-year">${esc(e.periode || "")}</div>
+        <div>
+          <div class="dl-title">${esc(e.poste || "")}</div>
+          <div class="dl-sub">${esc(e.entreprise || "")}</div>
+          ${has(e.description) ? `<p>${esc(e.description)}</p>` : ""}
+        </div>
+      </div>`).join("");
+  } else { $("#block-experience").classList.add("is-empty"); }
+
+  // If both formation and experience are empty, hide whole section
+  if (!has(p.formation) && !has(p.experience)) $("#parcours").classList.add("is-empty");
+
+  // Langues
+  if (has(p.langues)) {
+    $("#langues-list").innerHTML = p.langues.map(l => `
+      <div class="dl-row">
+        <div class="dl-year">${esc((l.langue || "").substring(0,3).toUpperCase())}</div>
+        <div>
+          <div class="dl-title">${esc(l.langue || "")}</div>
+          <div class="dl-sub">${esc(l.niveau || "")}</div>
+        </div>
+      </div>`).join("");
+  } else { $("#langues").classList.add("is-empty"); }
+
+  // Contact footer
+  const cgrid = [];
+  if (has(p.email))     cgrid.push({ l: "Email",     v: `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` });
+  if (has(p.telephone)) cgrid.push({ l: "Téléphone", v: `<a href="tel:${esc(p.telephone.replace(/\s/g,''))}">${esc(p.telephone)}</a>` });
+  if (has(p.ville))     cgrid.push({ l: "Localisation", v: esc(p.ville) });
+  if (has(p.linkedin))  cgrid.push({ l: "LinkedIn",  v: `<a href="${esc(p.linkedin)}" target="_blank" rel="noopener">Profil</a>` });
+  $("#contact-grid").innerHTML = cgrid.map(c =>
+    `<div class="contact-block"><div class="label">${c.l}</div><div class="value">${c.v}</div></div>`).join("");
+
+  $("#year").textContent = new Date().getFullYear();
+  $("#full-name").textContent = (p.prenom || "") + " " + (p.nom || "");
+}
+
+render(PORTFOLIO);
+</script>
+
+</body>
+</html>
