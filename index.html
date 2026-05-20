@@ -24,10 +24,10 @@
 const PORTFOLIO = {
 
   // ───── INFOS DE BASE ─────────────────────────────────────────────────────
-  prenom: "Michel",
-  nom: "Tartampion",
-  titre: "Soudeur-Chaudronnier Industriel",
-  ville: "Lyon, France",
+  prenom: "Sylvain",
+  nom: "Michel",
+  titre: "Soudeur-Monteur",
+  ville: "Hawaii, USA",
   email: "micheltartampion@email.com",
   telephone: "+33 6 12 34 56 78",
   disponibilite: "Disponible sous 1 mois", // ou "Immédiate", ou "" pour cacher
@@ -37,12 +37,12 @@ const PORTFOLIO = {
   // Écris juste son nom ci-dessous — l'extension (.jpg/.png) est optionnelle.
   // Exemple : photo: "ma-photo"   suffit.
   // Laisse "" si tu ne veux pas de photo (recommandé si tu débutes).
-  photo: "micheltartampion",
+  photo: "Exemple3",
 
   // ───── À PROPOS (2-4 phrases) ────────────────────────────────────────────
-  bio: "Chaudronnier-soudeur qualifé, spécialisé en TIG et MIG/MAG. Je travaille l'acier, l'inox et l'aluminium en respectant les exigences de contrôle des secteurs aéronautique et ferroviaire. Rigueur sur la préparation, la traçabilité et la conformité des assemblages. Disponible pour un poste en région lyonnaise.",
+  bio: " Rigueur sur la préparation, la traçabilité et la conformité des assemblages. Disponible pour un poste en région lyonnaise.",
 
-  annees_experience: 5,
+  annees_experience: 14,
 
   // ───── PROCÉDÉS MAÎTRISÉS ────────────────────────────────────────────────
   // niveau : "Notion" | "Pratique" | "Maîtrisé" | "Expert"
@@ -50,7 +50,8 @@ const PORTFOLIO = {
     { nom: "MIG / MAG",          code: "135", niveau: "Maîtrisé" },
     { nom: "TIG",                code: "141", niveau: "Maîtrisé" },
     { nom: "Électrode enrobée",  code: "111", niveau: "Pratique" },
-    { nom: "Fil fourré",         code: "136", niveau: "Pratique" },
+    { nom: "Fil fourré",         code: "136", niveau: "Notion" },
+    { nom: "Soudo brasure",         code: "136", niveau: "Expert" },
   ],
 
   // ───── MATÉRIAUX TRAVAILLÉS ──────────────────────────────────────────────
@@ -58,7 +59,8 @@ const PORTFOLIO = {
     "Acier au carbone",
     "Acier inoxydable 304/316",
     "Aluminium (séries 5000 / 6000)",
-    "Hardox500",
+    "Cuivre",
+    "Laiton",
   ],
 
   // ───── POSITIONS DE SOUDAGE ──────────────────────────────────────────────
@@ -67,14 +69,20 @@ const PORTFOLIO = {
   // ───── CERTIFICATIONS ────────────────────────────────────────────────────
   certifications: [
     {
-      nom: "Titre Professionnel Soudeur",
-      organisme: "Ministère du Travail",
-      annee: "2024",
-      details: "Obtenu avec mention"
+      nom: "Carte CWB FCAW",
+      organisme: "CWB Group",
+      annee: "2026",
+      details: ""
     },
     {
       nom: "Qualification ISO 9606-1",
       organisme: "Bureau Veritas",
+      annee: "2024",
+      details: "TIG 141 — Acier inox épaisseur 3mm"
+    },
+    {
+      nom: "AWS card FCAW",
+      organisme: "American Welding Society",
       annee: "2024",
       details: "TIG 141 — Acier inox épaisseur 3mm"
     },
@@ -99,6 +107,13 @@ const PORTFOLIO = {
       contexte: "Formation industrielle"
     },
     {
+      image: "micheltartampion",
+      titre: "Structure mécano-soudée",
+      procede: "MIG 135",
+      materiau: "Acier S235 — ép. 8mm",
+      contexte: "Projet personnel"
+    },
+    {
       image: "Exemple3",
       titre: "Structure mécano-soudée",
       procede: "MIG 135",
@@ -115,6 +130,11 @@ const PORTFOLIO = {
 
   // ───── FORMATION ─────────────────────────────────────────────────────────
   formation: [
+    {
+      diplome: "Bac Pro Chaudronnerie",
+      etablissement: "Lycée Pro Harry Cover",
+      annee: "2019",
+    },
     {
       diplome: "Titre Pro Soudeur",
       etablissement: "Centre de formation AFPA",
@@ -147,6 +167,7 @@ const PORTFOLIO = {
   langues: [
     { langue: "Français", niveau: "Langue maternelle" },
     { langue: "Anglais",  niveau: "B1 — Technique" },
+    { langue: "Chinois",  niveau: "LV2" },
   ],
 
   // ───── LIENS (laisse "" pour cacher un lien) ─────────────────────────────
